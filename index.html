@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GatePilot AI</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,19 +15,33 @@
 
         <h1>GatePilot AI</h1>
 
+        <select id="branch">
+            <option>CSE</option>
+            <option>ECE</option>
+            <option>EEE</option>
+            <option>ME</option>
+            <option>CE</option>
+        </select>
+
         <div class="card">
             <h2>GATE Countdown</h2>
-            <p id="countdown">52 Days Left</p>
+            <p id="countdown">Loading...</p>
         </div>
 
         <div class="card">
             <h2>Today's Target</h2>
-            <p>Operating Systems</p>
+            <p id="target-subject">Operating Systems</p>
         </div>
 
         <div class="card">
             <h2>Progress</h2>
-            <p>72% Completed</p>
+
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+
+            <p id="progress-text"></p>
+
         </div>
 
     </div>
@@ -33,4 +49,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
