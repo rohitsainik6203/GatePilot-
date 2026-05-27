@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #020617, #0f172a);
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 60px;
+    margin-bottom: 40px;
+    color: #38bdf8;
+    text-shadow: 0 0 15px #38bdf8;
+}
+
+.card {
+    background: rgba(30, 41, 59, 0.8);
+    border: 1px solid #38bdf8;
+    width: 320px;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h2 {
+    color: #7dd3fc;
+}
