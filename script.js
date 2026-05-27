@@ -26,27 +26,32 @@ const branchData = {
 
     CSE: {
         subject: "Operating Systems",
-        progress: 72
+        progress: 72,
+        recommendation: "Focus on DBMS and Computer Networks today."
     },
 
     ECE: {
         subject: "Signals and Systems",
-        progress: 64
+        progress: 64,
+        recommendation: "Revise Analog Electronics and Communication."
     },
 
     EEE: {
         subject: "Power Electronics",
-        progress: 58
+        progress: 58,
+        recommendation: "Practice Electrical Machines problems."
     },
 
     ME: {
         subject: "Thermodynamics",
-        progress: 81
+        progress: 81,
+        recommendation: "Solve more Fluid Mechanics numericals."
     },
 
     CE: {
         subject: "Structural Engineering",
-        progress: 69
+        progress: 69,
+        recommendation: "Focus on RCC and Environmental Engineering."
     }
 };
 
@@ -61,6 +66,9 @@ function updateDashboard(branch) {
 
     document.getElementById("progress-text").innerHTML =
         branchData[branch].progress + "% Completed";
+
+    document.getElementById("recommendation").innerHTML =
+        branchData[branch].recommendation;
 }
 
 
@@ -72,3 +80,43 @@ document.getElementById("branch").addEventListener("change", function () {
     updateDashboard(this.value);
 
 });
+function updateClock() {
+
+    const now = new Date();
+
+    const hours = now.getHours();
+
+    const minutes = now.getMinutes();
+
+    const seconds = now.getSeconds();
+
+    const time =
+        hours + ":" +
+        minutes.toString().padStart(2, '0') + ":" +
+        seconds.toString().padStart(2, '0');
+
+    document.getElementById("clock").innerHTML = time;
+
+
+    let greeting = "";
+
+    if (hours < 12) {
+        greeting = "Good Morning";
+    }
+
+    else if (hours < 18) {
+        greeting = "Good Afternoon";
+    }
+
+    else {
+        greeting = "Good Evening";
+    }
+
+    document.getElementById("greeting").innerHTML =
+        greeting;
+}
+
+
+setInterval(updateClock, 1000);
+
+updateClock();

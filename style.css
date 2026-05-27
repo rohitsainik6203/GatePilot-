@@ -72,3 +72,13 @@ select {
         width: 72%;
     }
 }
+#greeting {
+    color: #7dd3fc;
+    margin-top: -10px;
+}
+
+#clock {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #cbd5e1;
+}
