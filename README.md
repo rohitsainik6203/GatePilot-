@@ -59,3 +59,4 @@ GatePilot-AI/
 ## License
 
 MIT License
+Built with ❤️ using HTML, CSS and JavaScript.
