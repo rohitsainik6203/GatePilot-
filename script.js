@@ -1,6 +1,6 @@
 const examDate = new Date("February 7, 2027 09:00:00").getTime();
 
-const timer = setInterval(function () {
+setInterval(function () {
 
     const now = new Date().getTime();
 
@@ -10,14 +10,6 @@ const timer = setInterval(function () {
 
     document.getElementById("countdown").innerHTML =
         days + " Days Left";
-
-    if (distance < 0) {
-
-        clearInterval(timer);
-
-        document.getElementById("countdown").innerHTML =
-            "GATE Exam Started";
-    }
 
 }, 1000);
 
@@ -75,11 +67,14 @@ function updateDashboard(branch) {
 updateDashboard("CSE");
 
 
-document.getElementById("branch").addEventListener("change", function () {
+document.getElementById("branch")
+.addEventListener("change", function () {
 
     updateDashboard(this.value);
 
 });
+
+
 function updateClock() {
 
     const now = new Date();
@@ -120,3 +115,11 @@ function updateClock() {
 setInterval(updateClock, 1000);
 
 updateClock();
+
+
+document.getElementById("theme-btn")
+.addEventListener("click", function () {
+
+    document.body.classList.toggle("light-mode");
+
+});
